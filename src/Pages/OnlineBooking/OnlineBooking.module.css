@@ -1,0 +1,132 @@
+*{
+    font-family: sans-serif;
+}
+.Cover {
+    width: 100%;
+    height: 80vh;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Cover h3 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.outersection{
+    width: 600px;
+    height: 70vh;
+    /* border: 1px green solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formcover {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcover form {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    justify-content: center;
+    padding-left: 50px;
+    gap: 5px;
+    /* background-color: #404040;  */
+}
+
+.formcover form label {
+    font-size: 1.2em;
+}
+
+.formcover form input {
+    width: 340px;
+    height: 30px;
+}
+
+.formcover form input[type="submit"] {
+    background-color: #404040;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 1.4em;
+}
+
+.bg1 img {
+    border-radius: 5%;
+    width: 600px;
+    height: 400px;
+}
+
+.bg1{
+    width: 500px;
+    height: 70vh;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.suggestionsCover{
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.suggestions{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    /* border: 1px solid green; */
+    gap: 30px;
+}
+
+.suggestionsCover h2{
+    font-size: 2em;
+    text-align: start;
+    font-weight: 400;
+}
+.suggestions h3{
+    font-size: 1.2em;
+    text-align: start;
+    font-weight: 600;
+}
+.suggestions h4{
+    font-size: 1em;
+    text-align: start;
+    font-weight: 300;
+}
+
+.Msg h2{
+    text-align: center;
+    font-size: 2em;
+    color: green;
+}
+
+.info{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    width: 100%;
+    height: 50px;
+
+}

@@ -1,0 +1,103 @@
+.Headercover{
+    width: 100%;
+    height: 180px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 100px;
+}
+
+.logo{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    gap: 10px;
+}
+.logo img{
+    width: 280px;
+    height: 280px;
+}
+
+.logo h4{
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color:#4C585B  ;
+}
+
+.add1{
+    color: #4C585B;
+}
+.add{
+    color: white;
+}
+
+.navbar{
+    /* border: 1px solid black; */
+    min-width: 600px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555555a3;
+}
+
+/* Active Link Style */
+.active {
+    background-color: #555;; /* Highlight active tab */
+    font-weight: bold;
+}
+
+.contact{
+    height: 50px;
+    width: 220px;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color:white;
+    background-color: #4C585B;
+
+}
+
+/* .navbar ul{
+    height: 100%;
+    width: 100%;
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;
+} */
+.navbar span{
+    font-family: sans-serif;
+    font-size: 1.1em;
+    list-style: none;
+    font-weight: 300;
+}
+
+.navbar :link{
+    text-decoration: none;
+}
+
+    /* .navbar span:hover{
+    color:#FF8383;
+    color:#4C585B  ;
+    } */
+

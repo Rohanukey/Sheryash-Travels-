@@ -1,0 +1,58 @@
+.title{
+    width: 100%;
+    height: 60vh;
+    /* border: 1px solid red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items:end;    
+    /* padding-left: 5%; */
+    background-image: url(../../assets/bg6.jpg);
+    background-repeat: no-repeat;
+    background-position: center -550px;    
+    background-size: cover;
+}
+.title h1{
+    font-family: sans-serif;
+    color: white;
+    width: 50%;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 200px;
+    /* border: 1px solid red; */
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+}
+
+.details{
+    width: 100%;
+    height: 40vh;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.info{
+    width: 600px;
+    height: 40vh;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+}
+
+.info h3{
+    /* padding-top:50px; */
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #404040;
+    font-size: 1.5em;
+    line-height: 40px;
+}
+
+.pic img{
+    width: 280px;
+    height: 300px;
+    border-radius: 30%;
+}
+
