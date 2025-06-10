@@ -1,10 +1,11 @@
-*{
+* {
     font-family: sans-serif;
+    box-sizing: border-box;
 }
+
 .Cover {
     width: 100%;
     height: 80vh;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -12,37 +13,44 @@
 
 .Cover h3 {
     font-size: 2.5em;
-    text-align: center;
 }
 
-.outersection{
-    width: 600px;
+.outersection {
+    width: 100%;
+    max-width: 600px;
     height: 70vh;
-    /* border: 1px green solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.Renderform {
+    width: 900px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .formcover {
     width: 100%;
-    height: 60vh;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    background-color: #B9D4AA;
 }
 
 .formcover form {
-    width: 500px;
-    height: 600px;
+    width: 800px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     justify-content: center;
-    padding-left: 50px;
-    gap: 5px;
-    /* background-color: #404040;  */
+    gap: 20px;
 }
 
 .formcover form label {
@@ -50,8 +58,17 @@
 }
 
 .formcover form input {
-    width: 340px;
-    height: 30px;
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.formcover form input::placeholder {
+    font-size: 1.2em;
+    color: #404040;
 }
 
 .formcover form input[type="submit"] {
@@ -61,7 +78,7 @@
     border-radius: 10px;
     border: none;
     color: white;
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 .bg1 img {
@@ -70,54 +87,64 @@
     height: 400px;
 }
 
-.bg1{
+.bg1 {
+    height: auto;
     width: 500px;
-    height: 70vh;
-    /* border: 1px solid red; */
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.suggestionsCover{
+.suggestionsCover {
     width: 100%;
-    height: 500px;
-    /* border: 1px solid blue; */
+    height: 300px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-.suggestions{
+
+.suggestions {
     width: 100%;
-    height: 300px;
+    height: 150px;
     display: flex;
-    /* border: 1px solid green; */
     gap: 30px;
 }
 
-.suggestionsCover h2{
+.suggestionsCover h2 {
     font-size: 2em;
     text-align: start;
     font-weight: 400;
 }
-.suggestions h3{
+
+.suggestions h3 {
     font-size: 1.2em;
     text-align: start;
     font-weight: 600;
 }
-.suggestions h4{
+
+.suggestions h4 {
     font-size: 1em;
     text-align: start;
     font-weight: 300;
 }
 
-.Msg h2{
+.Msg {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Msg h2 {
     text-align: center;
     font-size: 2em;
     color: green;
 }
 
-.info{
+.info {
     width: 100%;
     height: 100px;
     display: flex;
@@ -125,8 +152,105 @@
     gap: 10px;
 }
 
-.title{
+.title {
     width: 100%;
     height: 50px;
+}
 
+.Outercontainer {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+}
+
+.Container {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tick {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tick img {
+    width: 130px;
+    height: 130px;
+}
+
+.btn1 {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(34, 164, 34);
+    color: white;
+    font-size: 1.5em;
+}
+
+/* ✅ Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .Cover {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .Renderform,
+    .formcover form {
+        width: 90%;
+        height: auto;
+    }
+
+    .formcover {
+        height: auto;
+        padding: 20px;
+    }
+
+    .formcover form input,
+    .formcover form input[type="submit"] {
+        width: 100%;
+    }
+
+    .bg1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .bg1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .Outercontainer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 30px;
+    }
+
+    .Container {
+        width: 90%;
+        height: auto;
+    }
+
+    .suggestions {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Msg {
+        height: auto;
+        padding: 20px;
+    }
 }

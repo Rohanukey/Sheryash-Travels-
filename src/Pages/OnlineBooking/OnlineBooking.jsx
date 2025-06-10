@@ -3,6 +3,7 @@ import Css from "./OnlineBooking.module.css";
 import { useForm } from "react-hook-form";
 import car1 from "../../assets/Car1.jpg";
 import axios from "axios";
+import tick from "../../assets/tick.png"
 import emailjs from 'emailjs-com';
 
 
@@ -29,20 +30,21 @@ function OnlineBooking() {
                 // Reset form fields after submission
                 reset();
 
-                {emailjs.send(
-                    'service_y16w09j',     // replace with your EmailJS service ID
-                    'template_7wo49ku',    // replace with your EmailJS template ID
-                    dat,
-                    'NbgYRGNM_jZv7vGOs'      // replace with your EmailJS public key
-                )
-                    .then(result => {
-                        console.log('Email sent:', result.text);
-                        alert("Booking confirmed & email sent!");
-                    })
-                    .catch(error => {
-                        console.error('Email error:', error.text);
-                    });
-                }
+                {/*
+                    emailjs.send(
+                        'service_y16w09j',     // replace with your EmailJS service ID
+                        'template_7wo49ku',    // replace with your EmailJS template ID
+                        dat,
+                        'NbgYRGNM_jZv7vGOs'      // replace with your EmailJS public key
+                    )
+                        .then(result => {
+                            console.log('Email sent:', result.text);
+                            alert("Booking confirmed & email sent!");
+                        })
+                        .catch(error => {
+                            console.error('Email error:', error.text);
+                        });
+                */}
 
                 // successful massage
                 setSuccessMessage(`Your Booking has been successfully, Thankyou for chosing us ${dat.name}.`)
@@ -83,37 +85,44 @@ function OnlineBooking() {
                 {isSubmitting ? (
                     <h2 style={{ color: "orange", marginTop: "20px" }}>Submitting...</h2>
                 ) : isFormVisible ? (
-                    <div>
+                    <div className={Css.Renderform}>
                         <div className={Css.title}>
                             <h3>Want to book a ride...?</h3>
                         </div>
                         <div className={Css.formcover}>
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <label>Name</label>
-                                <input {...register("name", { required: true, maxLength: 20 },)} />
-                                <br />
-                                <label>Pickup</label>
-                                <input {...register("pickup", { required: true, maxLength: 20 },)} />
-                                <br />
-                                <label>Destination</label>
-                                <input {...register("Destination", { required: true, maxLength: 20 },)} />
-                                <br />
-                                <label>Number</label>
-                                <input {...register("number")} type="tel" required />
-                                <br />
-                                <label>Date</label>
-                                <input type="date" {...register("date")} required />
-                                <br />
-                                <label>Time</label>
-                                <input type="time" {...register("time")} required />
-                                <br />
-                                <input id="btnsumbit" type="submit" value="Book Now" /> 
+                                <div className={Css.Outercontainer}>
+                                    <div className={Css.Container}>
+
+                                        <input {...register("name", { required: true, maxLength: 20 },)} placeholder="Name" />
+
+
+                                        <input {...register("pickup", { required: true, maxLength: 20 },)} placeholder="Pickup" />
+
+
+                                        <input {...register("Destination", { required: true, maxLength: 20 },)} placeholder="Destination" />
+
+                                    </div>
+                                    <div className={Css.Container}>
+
+                                        <input {...register("number")} type="tel" required placeholder="Number" />
+
+
+                                        <input type="date" {...register("date")} required />
+
+
+                                        <input type="time" {...register("time")} required />
+
+                                    </div>
+                                </div>
+                                <input id="btnsumbit" type="submit" value="Book Now" />
                             </form>
                         </div>
                     </div>) : (
                     <div className={Css.Msg}>
+                        <div className={Css.tick}><img src={tick}></img></div>
                         <h2>{successMessage}</h2>
-                        <button onClick={()=>(setIsFormVisible(true))} style={{height:50 , width:100}}>Back</button>
+                        <button className={Css.btn1} onClick={() => (setIsFormVisible(true))}>Back</button>
                     </div>)}
             </div>
             <div className={Css.bg1}>

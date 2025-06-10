@@ -1,10 +1,17 @@
 import React from 'react'
 import Css from "./Header.module.css"
-import logo from '../../assets/l1.jpeg'
+import logo from '../../assets/Sheryash_logo.png'
+import ham from '../../assets/hamburger.png'
 import { Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import MiniHeader from "../MiniHeader/MiniHeader"
 
 
 function Header() {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
 
     const location = useLocation(); // Get the current path
 
@@ -13,7 +20,6 @@ function Header() {
             <div className={Css.Headercover}>
                 <div className={Css.logo}>
                     <img src={logo}></img>
-
                 </div>
                 <div className={Css.navbar}>
                     <div className={Css.navbar}>
@@ -45,9 +51,15 @@ function Header() {
                         <p className={Css.contact}>Contact: 9370235180</p>
                     </div>
                 </div>
+                <div className={Css.MiniHeader} onClick={toggleMenu}>
+                    <img src={ham}></img>
+                </div>
+            </div>
+            <div className={Css.Menu} style={{ width: "100%" }}>
+                {isOpen ? (<MiniHeader />) : (<div></div>)}
             </div>
         </>
     )
 }
 
-export default Header
+export default Header   

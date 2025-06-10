@@ -1,21 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.Outercover {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    z-index: 1;
+}
 
-.bgcover{
+.bgcover {
     width: 100%;
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #D9EAFD;
     background-color: #F2EFE7;
 }
 
-.bg{
+.bg {
     width: 80%;
     height: 60vh;
     display: flex;
@@ -23,41 +28,36 @@
     justify-content: flex-end;
     padding-left: 2%;
     padding-bottom: 30px;
-    /* border: 1px solid black; */
     background-image: url(../../assets/bg11.jpg);
-    background-position:bottom;
+    background-position: bottom;
     background-color: #4C585B;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: grey 5px 5px 5px ;   
+    box-shadow: grey 5px 5px 5px;
 }
 
-
-.bg h1{
+.bg h1 {
     font-family: sans-serif;
     font-weight: 300;
     font-size: 5em;
-    color: #7ec736;
-    color: whitesmoke;
     color: #F2EFE7;
-    text-shadow: 1px 1px 1px black ;
+    text-shadow: 1px 1px 1px black;
     text-transform: uppercase;
-
 }
 
-.bgcover img{
+.bgcover img {
     width: 60%;
     height: 600px;
 }
 
-.detailscover{
+.detailscover {
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
     display: flex;
     justify-content: center;
 }
 
-.details{
+.details {
     width: 60%;
     height: 100%;
     display: grid;
@@ -66,25 +66,54 @@
     align-items: center;
 }
 
-.info{
+.info {
     width: 300px;
     height: 100px;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.info h3{
+.info h3 {
     font-family: sans-serif;
     font-size: 1.2em;
-    color: #404040db;
-    color: #FF8383;
     color: #4C585B;
 }
-.info h4{
+
+.info h4 {
     font-family: sans-serif;
     font-size: 1em;
     color: rgba(0, 0, 0, 0.737);
     font-weight: 300;
+}
+
+/* ✅ Responsive Styles - Mobile First Approach */
+@media (max-width: 768px) {
+    .Outercover {
+        gap: 100px;
+    }
+
+    .bg {
+        padding-top: 50px;
+        padding-left: 20px;
+        justify-content: flex-start;
+    }
+
+    .bg h1 {
+        font-size: 1.6em;
+        color: silver;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Optional: Improve display on extra small phones */
+@media (max-width: 375px) {
+    .bg h1 {
+        font-size: 1.25em;
+    }
 }
