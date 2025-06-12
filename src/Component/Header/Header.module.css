@@ -137,3 +137,24 @@
         mix-blend-mode: multiply;
     }
 }
+
+@media (max-width:1024px) {
+
+    .logo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact{
+        display: none;
+    }
+
+    .Headercover{
+        gap:40px
+    }
+    .navbar{
+        width: 70%;
+        min-width: 400px;
+        gap:5px;
+    }
+}

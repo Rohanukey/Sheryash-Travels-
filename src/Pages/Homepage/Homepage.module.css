@@ -46,8 +46,9 @@
 }
 
 .bgcover img {
-    width: 60%;
-    height: 600px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 .detailscover {
@@ -58,17 +59,20 @@
 }
 
 .details {
-    width: 60%;
+    width: 80%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+    gap: 10px;
 }
 
 .info {
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -87,7 +91,7 @@
     font-weight: 300;
 }
 
-/* ✅ Responsive Styles - Mobile First Approach */
+/* ✅ Responsive Styles - Mobile First */
 @media (max-width: 768px) {
     .Outercover {
         gap: 100px;
@@ -100,20 +104,34 @@
     }
 
     .bg h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
         color: silver;
     }
 
+    .info {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
     .details {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        /* Reset grid properties */
+        grid-template-columns: none;
+        justify-items: unset;
+        align-items: unset;
+    }
+
+    .bg h1 {
+        font-size: 1.5em;
     }
 }
 
-/* Optional: Improve display on extra small phones */
 @media (max-width: 375px) {
     .bg h1 {
-        font-size: 1.25em;
+        font-size: 1.4rem;
     }
 }

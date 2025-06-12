@@ -1,30 +1,34 @@
+/* Global Styles */
 * {
     font-family: sans-serif;
     box-sizing: border-box;
 }
 
-.Cover {
+.bookingPageContainer {
     width: 100%;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.Cover h3 {
+.formHeader h3 {
     font-size: 2.5em;
 }
 
-.outersection {
+.formSection {
     width: 100%;
+    height: auto;
     max-width: 600px;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 20px;
 }
 
-.Renderform {
+.bookingFormWrapper {
     width: 900px;
     height: 70vh;
     display: flex;
@@ -34,7 +38,7 @@
     align-items: flex-start;
 }
 
-.formcover {
+.formContainer {
     width: 100%;
     height: 420px;
     display: flex;
@@ -44,20 +48,21 @@
     background-color: #B9D4AA;
 }
 
-.formcover form {
+.formContainer form {
     width: 800px;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-.formcover form label {
+.formContainer form label {
     font-size: 1.2em;
 }
 
-.formcover form input {
+.formContainer form input {
     width: 360px;
     height: 50px;
     border-radius: 10px;
@@ -66,12 +71,18 @@
     font-size: 1.2em;
 }
 
-.formcover form input::placeholder {
+.formContainer form input::placeholder {
     font-size: 1.2em;
     color: #404040;
 }
 
-.formcover form input[type="submit"] {
+.formContainer form input:focus {
+    outline: none; /* removes default blue outline */
+    border: 2px solid #404040; /* green border on focus */
+}
+
+
+.formContainer form input[type="submit"] {
     background-color: #404040;
     width: 350px;
     height: 50px;
@@ -81,13 +92,17 @@
     font-size: 1.5em;
 }
 
-.bg1 img {
+.formContainer form input[type="submit"]:hover{
+    border: 5px solid white;
+}
+
+.bookingImageSection img {
     border-radius: 5%;
     width: 600px;
     height: 400px;
 }
 
-.bg1 {
+.bookingImageSection {
     height: auto;
     width: 500px;
     min-height: 70vh;
@@ -96,7 +111,7 @@
     gap: 50px;
 }
 
-.suggestionsCover {
+.suggestionsContainer {
     width: 100%;
     height: 300px;
     display: flex;
@@ -104,32 +119,32 @@
     gap: 40px;
 }
 
-.suggestions {
+.suggestionsList {
     width: 100%;
     height: 150px;
     display: flex;
     gap: 30px;
 }
 
-.suggestionsCover h2 {
+.suggestionsContainer h2 {
     font-size: 2em;
     text-align: start;
     font-weight: 400;
 }
 
-.suggestions h3 {
+.suggestionItem h3 {
     font-size: 1.2em;
     text-align: start;
     font-weight: 600;
 }
 
-.suggestions h4 {
+.suggestionItem h4 {
     font-size: 1em;
     text-align: start;
     font-weight: 300;
 }
 
-.Msg {
+.successMessageContainer {
     width: 100%;
     height: 50vh;
     display: flex;
@@ -138,13 +153,13 @@
     align-items: center;
 }
 
-.Msg h2 {
+.successMessageContainer h2 {
     text-align: center;
     font-size: 2em;
     color: green;
 }
 
-.info {
+.suggestionItem {
     width: 100%;
     height: 100px;
     display: flex;
@@ -152,19 +167,19 @@
     gap: 10px;
 }
 
-.title {
+.formHeader {
     width: 100%;
     height: 50px;
 }
 
-.Outercontainer {
+.inputGroupsWrapper {
     height: 300px;
     width: 100%;
     display: flex;
     gap: 50px;
 }
 
-.Container {
+.inputGroup {
     width: 400px;
     height: 300px;
     display: flex;
@@ -174,7 +189,7 @@
     gap: 20px;
 }
 
-.tick {
+.successIcon {
     width: 100%;
     height: 150px;
     display: flex;
@@ -182,12 +197,12 @@
     align-items: center;
 }
 
-.tick img {
+.successIcon img {
     width: 130px;
     height: 130px;
 }
 
-.btn1 {
+.backButton {
     width: 200px;
     height: 50px;
     border-radius: 20px;
@@ -197,60 +212,152 @@
     font-size: 1.5em;
 }
 
-/* ✅ Responsive Design for Mobile */
+
+@media(max-width:1630px){
+    .formSection,.bookingImageSection{
+        width: 450px;
+    }
+    .bookingFormWrapper{
+        width: 100%;
+    }
+    .bookingImageSection img{
+        width: 100%;
+        height: 300px;
+    }
+    .formContainer{
+        height: 500px;
+        padding-top: 25px;
+    }
+    .inputGroupsWrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .formContainer form{
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+    .formContainer form input{
+        height: 40px;
+    }
+
+    
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+    .bookingPageContainer {
+        flex-direction: column-reverse;
+    }
+    .bookingFormWrapper,
+    .formContainer {
+        max-width: 750px;
+    }
+    .formContainer form {
+        width: 100%;
+        gap: 70px;
+    }
+    .inputGroup {
+        width: 350px;
+    }
+    .formContainer form input,
+    .formContainer form input[type="submit"] {
+        width: 300px;
+    }
+    .bookingImageSection {
+        min-height: 50vh;
+        width: 70%;
+        align-items: center;
+    }
+
+    .bookingImageSection img{
+        height: 350px;
+    }
+}
+
+/* Tablet */
 @media (max-width: 768px) {
-    .Cover {
+    .bookingPageContainer {
         flex-direction: column-reverse;
         height: auto;
         padding: 20px;
         gap: 30px;
     }
-
-    .Renderform,
-    .formcover form {
+    .bookingFormWrapper,
+    .formContainer form {
         width: 90%;
         height: auto;
+        align-items: center;
     }
-
-    .formcover {
+    .formContainer form{
+        gap: 30px;
+    }
+    .formContainer {
         height: auto;
         padding: 20px;
     }
-
-    .formcover form input,
-    .formcover form input[type="submit"] {
+    .formContainer form input{
         width: 100%;
     }
-
-    .bg1 {
+    .formContainer form input[type="submit"] {
+        width: 90%;
+        margin-left: 0;
+    }
+    .bookingImageSection {
         width: 100%;
         align-items: center;
     }
-
-    .bg1 img {
+    .bookingImageSection img {
         width: 100%;
         height: auto;
     }
-
-    .Outercontainer {
+    .inputGroupsWrapper {
         flex-direction: column;
         align-items: center;
         height: auto;
         gap: 30px;
     }
-
-    .Container {
+    .inputGroup {
         width: 90%;
         height: auto;
     }
-
-    .suggestions {
+    .suggestionsList {
         flex-direction: column;
         height: auto;
     }
-
-    .Msg {
+    .successMessageContainer {
         height: auto;
         padding: 20px;
+        gap:40px;
+    }
+}
+
+/* Mobile */
+@media(max-width: 425px) {
+    .formSection{
+        width:100%;
+        max-width:420px;
+    }
+
+    .formContainer form,
+    .inputGroup {
+        width: 95%;
+    }
+    .bookingPageContainer {
+        padding: 10px;
+    }
+    .formContainer {
+        padding: 10px;
+    }
+    .inputGroupsWrapper {
+        width: 100%;
+    }
+    .formContainer form input,
+    .formContainer form input::placeholder {
+        font-size: 1.1em;
+        height: 45px;
+        width: 100%;
     }
 }

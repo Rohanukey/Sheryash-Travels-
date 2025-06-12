@@ -22,41 +22,39 @@ function Header() {
                     <img src={logo}></img>
                 </div>
                 <div className={Css.navbar}>
-                    <div className={Css.navbar}>
-                        <Link
-                            to="/"
-                            className={location.pathname === "/" ? Css.active : ""}
-                        >
-                            <span className={`${Css.add1} ${location.pathname === "/" ? Css.add : ""}`}>Home</span>
-                        </Link>
-                        <Link
-                            to="/About"
-                            className={location.pathname === "/About" ? Css.active : ""}
-                        >
-                            <span className={`${Css.add1} ${location.pathname === "/About" ? Css.add : ""}`}>About</span>
-                        </Link>
-                        <Link
-                            to="/Services"
-                            className={location.pathname === "/Services" ? Css.active : ""}
-                        >
-                            <span className={`${Css.add1} ${location.pathname === "/Services" ? Css.add : ""}`}>Services</span>
-                        </Link>
-                        <Link
-                            to="/OnlineBooking"
-                            className={location.pathname === "/OnlineBooking" ? Css.active : ""}
-                        >
-                            <span className={`${Css.add1} ${location.pathname === "/OnlineBooking" ? Css.add : ""}`}>Online Booking</span>
-                        </Link>
+                    <Link
+                        to="/"
+                        className={location.pathname === "/" ? Css.active : ""}
+                    >
+                        <span className={`${Css.add1} ${location.pathname === "/" ? Css.add : ""}`}>Home</span>
+                    </Link>
+                    <Link
+                        to="/About"
+                        className={location.pathname === "/About" ? Css.active : ""}
+                    >
+                        <span className={`${Css.add1} ${location.pathname === "/About" ? Css.add : ""}`}>About</span>
+                    </Link>
+                    <Link
+                        to="/Services"
+                        className={location.pathname === "/Services" ? Css.active : ""}
+                    >
+                        <span className={`${Css.add1} ${location.pathname === "/Services" ? Css.add : ""}`}>Services</span>
+                    </Link>
+                    <Link
+                        to="/OnlineBooking"
+                        className={location.pathname === "/OnlineBooking" ? Css.active : ""}
+                    >
+                        <span className={`${Css.add1} ${location.pathname === "/OnlineBooking" ? Css.add : ""}`}>Online Booking</span>
+                    </Link>
 
-                        <p className={Css.contact}>Contact: 9370235180</p>
-                    </div>
+                    <p className={Css.contact}>Contact: 9370235180</p>
                 </div>
                 <div className={Css.MiniHeader} onClick={toggleMenu}>
                     <img src={ham}></img>
                 </div>
             </div>
             <div className={Css.Menu} style={{ width: "100%" }}>
-                {isOpen ? (<MiniHeader />) : (<div></div>)}
+                {isOpen ? (<MiniHeader closeMenu={() => { setIsOpen(false) }} />) : (<div></div>)}
             </div>
         </>
     )
