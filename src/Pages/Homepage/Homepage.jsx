@@ -16,7 +16,7 @@ function Homepage() {
           <div className={Css.details}>
             <div className={Css.info}>
               <h3>Email</h3>
-              <h4>ShreyashTravels@gmail.com</h4>
+              <h4>ShreyashTravel@gmail.com</h4>
             </div>
             <div className={Css.info}>
               <h3>Address</h3>

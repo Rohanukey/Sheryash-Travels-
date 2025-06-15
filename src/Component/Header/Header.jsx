@@ -47,14 +47,14 @@ function Header() {
                         <span className={`${Css.add1} ${location.pathname === "/OnlineBooking" ? Css.add : ""}`}>Online Booking</span>
                     </Link>
 
-                    <p className={Css.contact}>Contact: 9370235180</p>
+                    {/*<p className={Css.contact}>Contact: 9370235180</p>*/}
                 </div>
                 <div className={Css.MiniHeader} onClick={toggleMenu}>
                     <img src={ham}></img>
                 </div>
             </div>
             <div className={Css.Menu} style={{ width: "100%" }}>
-                {isOpen ? (<MiniHeader closeMenu={() => { setIsOpen(false) }} />) : (<div></div>)}
+                {isOpen && <MiniHeader closeMenu={() => setIsOpen(false)} />}
             </div>
         </>
     )

@@ -3,7 +3,7 @@ import Home from "./Pages/Homepage/Homepage"
 import Header from "./Component/Header/Header";
 import MiniHeader from "./Component/MiniHeader/MiniHeader";
 import About from "./Pages/About/About";
-import Services from "./Pages/Services/Services";
+import Ser from "./Pages/Services/Services";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import OnlineBooking from "./Pages/OnlineBooking/OnlineBooking";
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route element={<Home />} path="/" />
           <Route element={<About/>} path="/About" />
-          <Route element={<Services/>} path="/Services" />
+          <Route element={<Ser/>} path="/Services"/>
           <Route element={<ContactUs/>} path="/ContactUs" />
           <Route element={<OnlineBooking/>} path="/OnlineBooking" />
           {/*<Route element={<Home />} path="/About" />

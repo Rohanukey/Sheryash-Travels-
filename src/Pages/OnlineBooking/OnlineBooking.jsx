@@ -24,12 +24,12 @@ function OnlineBooking() {
                 setData((prev) => [...prev, dat]);
                 reset();
 
-                await emailjs.send(
+                {/*await emailjs.send(
                     'service_y16w09j',
                     'template_7wo49ku',
                     dat,
                     'NbgYRGNM_jZv7vGOs'
-                );
+                );*/}
 
                 setSuccessMessage(`Your Booking has been successfully, Thankyou for chosing us ${dat.name}.`);
                 setIsFormVisible(false);
@@ -57,9 +57,7 @@ function OnlineBooking() {
     return (
         <div className={Css.bookingPageContainer}>
             <div className={Css.formSection}>
-                {isSubmitting ? (
-                    <h2 style={{ color: "orange", marginTop: "20px" }}>Submitting...</h2>
-                ) : isFormVisible ? (
+                {isFormVisible ? (
                     <div className={Css.bookingFormWrapper}>
                         <div className={Css.formHeader}>
                             <h3>Want to book a ride...?</h3>
@@ -78,6 +76,11 @@ function OnlineBooking() {
                                         <input type="time" {...register("time")} required />
                                     </div>
                                 </div>
+                                {isSubmitting ? (
+                                    <div className={Css.SubmitingWrapper}>
+                                        <h2 style={{ color: "orange", marginTop: "20px" }}>Submitting...</h2>
+                                    </div>
+                                ):(<div></div>)}
                                 <input id="submitbtn" type="submit" value="Book Now" />
                             </form>
                         </div>

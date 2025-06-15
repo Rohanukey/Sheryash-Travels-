@@ -1,6 +1,6 @@
 .Headercover {
     width: 100%;
-    height: 180px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,8 +10,8 @@
 }
 
 .logo {
-    width: 280px;
-    height: 280px;
+    width:  250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +110,7 @@
 @media (max-width: 768px) {
     .MiniHeader {
         display: block;
-    }
+    }   
 
     .Headercover {
         justify-content: space-between;

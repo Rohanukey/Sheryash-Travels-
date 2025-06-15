@@ -55,7 +55,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 .formContainer form label {
@@ -94,6 +93,14 @@
 
 .formContainer form input[type="submit"]:hover{
     border: 5px solid white;
+}
+
+.SubmitingWrapper{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bookingImageSection img {
@@ -136,6 +143,8 @@
     font-size: 1.2em;
     text-align: start;
     font-weight: 600;
+    color: #007BFF ;
+    color: darkgreen;
 }
 
 .suggestionItem h4 {
@@ -292,7 +301,7 @@
         align-items: center;
     }
     .formContainer form{
-        gap: 30px;
+        gap: 20px;
     }
     .formContainer {
         height: auto;
