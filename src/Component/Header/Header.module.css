@@ -101,10 +101,11 @@
 }
 
 .Menu {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 100px;
 }
+
 
 /* ✅ Responsive Styling */
 @media (max-width: 768px) {

@@ -8,11 +8,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     /* border: 1px solid red; */
     gap: 150px;
     height: auto;
-    min-height: 70vh;
+    min-height: 81vh;
+    padding-top: 120px;
 }
 
 .TripDetails {
@@ -20,7 +21,7 @@
     height: auto;
 }
 
-.title{
+.title {
     width: 100%;
     height: 120px;
     display: flex;
@@ -28,12 +29,13 @@
     justify-content: space-between;
 }
 
-.title h3{
+.title h3 {
     font-size: 2.5em;
     font-family: sans-serif;
     font-weight: 600;
 }
-.title h4{
+
+.title h4 {
     font-size: 2em;
     font-family: sans-serif;
     font-weight: 600;
@@ -64,17 +66,126 @@ td {
     font-size: 1.2em;
 }
 
-.Imagecover{
+.Imagecover {
     width: 700px;
     height: 450px;
-    background-color: rgba(128, 128, 128, 0.656);
+    /* background-color: rgba(128, 128, 128, 0.656); */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
 }
 
-.Imagecover img{
+.Imagecover img {
     width: 95%;
     height: 95%;
+}
+
+.mobileBG {
+    display: none;
+}
+
+@media (max-width:1440px) {
+
+    .ContentWrapper {
+        gap: 50px;
+    }
+
+    .Imagecover {
+        width: 50%;
+        max-width: 500px;
+    }
+
+    .TripDetails {
+        width: 45%;
+        max-width: 500px;
+    }
+
+    .TripDetails h3 {
+        font-size: 2em;
+    }
+
+    .TripDetails table {
+        width: 100%;
+    }
+}
+
+@media (max-width :1024px) {
+    .Imagecover {
+        display: none;
+    }
+
+    .ContentWrapper {
+        gap: 20px;
+        padding-top: 50px;
+    }
+
+    .mobileBG {
+        display: block;
+        width: 45%;
+        max-width: 400px;
+        height: auto;
+        /* background-color: rgba(128, 128, 128, 0.656); */
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        /* padding-top: 120px; */
+        border-radius: 40px;
+    }
+
+    .mobileBG img {
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+        border-radius: 20px;
+    }
+
+    .TripDetails {
+        width: 50%;
+    }
+
+    .TripDetails h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width:768px) {
+    .ContentWrapper {
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .mobileBG {
+        display: none;
+    }
+
+    .Imagecover {
+        display: block;
+        width: 90%;
+        height: auto;
+    }
+
+    .TripDetails {
+        width: 100%;
+        height: auto;
+        min-height: 460px;
+    }
+}
+
+@media(max-width:440px) {
+    .title{
+        height: 100px;
+    }
+
+    .TripDetails h3 {
+        font-size: 1.5em;
+    }
+    .TripDetails table th{
+        font-size: 1.2em;
+    }
+    .TripDetails table td{
+        font-size: 1em;
+    }
 }

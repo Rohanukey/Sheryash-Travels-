@@ -6,6 +6,7 @@ import About from "./Pages/About/About";
 import Ser from "./Pages/Services/Services";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import OnlineBooking from "./Pages/OnlineBooking/OnlineBooking";
+import Footer from "./Component/Footer/Footer";
 function App() {
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route element={<Home />} path="/contact" />
           <Route element={<Home />} path="/Online Booking" />*/}
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )

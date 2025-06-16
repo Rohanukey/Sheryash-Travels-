@@ -1,7 +1,5 @@
 import React from 'react'
 import Css from "./About.module.css"
-import pic1 from "../../assets/pro1.jpg"
-import pic2 from "../../assets/pro2.jpg"
 import pic3 from "../../assets/tokyo.jpg"
 
 function About() {

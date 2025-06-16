@@ -1,0 +1,17 @@
+.footerWrapper{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+}
+
+.footerWrapper p{
+    font-size: 1.2em;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;
+}

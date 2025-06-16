@@ -1,6 +1,7 @@
 import React from 'react'
 import Css from "../../Pages/Services/Services.module.css"
 import bg from '../../assets/taxi.jpg'
+import bg2 from '../../assets/taxi_v.jpg'
 
 function Services() {
 
@@ -16,7 +17,10 @@ function Services() {
         <>
             <div className={Css.ContentWrapper}>
                 <div className={Css.Imagecover}>
-                   <img src={bg}></img>
+                    <img src={bg} alt='BG'></img>
+                </div>
+                <div className={Css.mobileBG}>
+                    <img src={bg2} alt='mobileBG'></img>
                 </div>
                 <div className={Css.TripDetails}>
                     <div className={Css.title}>
