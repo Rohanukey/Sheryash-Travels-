@@ -2,22 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .ContentWrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: top;
+    /* align-items: flex-start; */
     /* border: 1px solid red; */
     gap: 150px;
     height: auto;
-    min-height: 81vh;
-    padding-top: 120px;
+    min-height: 75vh;
+    padding-top: 80px;
 }
 
 .TripDetails {
     width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     height: auto;
 }
 
@@ -31,13 +35,12 @@
 
 .title h3 {
     font-size: 2.5em;
-    font-family: sans-serif;
     font-weight: 600;
+    color: rgb(30, 119, 197);
 }
 
 .title h4 {
     font-size: 2em;
-    font-family: sans-serif;
     font-weight: 600;
 }
 
@@ -84,6 +87,65 @@ td {
 .mobileBG {
     display: none;
 }
+
+.selector {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.selector select {
+    width: 200px;
+    height: 40px;
+    font-size: 1.4em;
+    border-radius: 20px;
+    background-color: rgb(30, 119, 197);
+    color: white;
+    text-align: center;
+}
+
+.selector select option{
+    background-color: white;
+    color:rgb(30, 119, 197);
+}
+
+.selector p {
+    line-height: 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.notes{
+    width: 100%;
+    height: auto;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 50px;
+    padding-left: 60px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+
+.notes h2{
+    font-size: 2.2em;
+    color: rgb(30, 119, 197);
+}
+.notes label{
+      font-size: 1.6em;
+      line-height: 50px;
+}
+.notes ul{
+      font-size: 1.2em;
+      padding-left: 50px;
+}
+.notes ul li{
+    line-height: 30px;
+}
+
+
 
 @media (max-width:1440px) {
 
@@ -147,6 +209,14 @@ td {
     .TripDetails h3 {
         font-size: 1.8em;
     }
+    .notes{
+        padding-left: 50px;
+        padding-right:10px ;
+    }
+    .title{
+        height: 80px;
+    }
+
 }
 
 @media (max-width:768px) {
@@ -172,20 +242,48 @@ td {
         height: auto;
         min-height: 460px;
     }
+    .notes{
+        padding-left: 40px;
+    }
 }
 
 @media(max-width:440px) {
-    .title{
+    .title {
         height: 100px;
     }
 
     .TripDetails h3 {
         font-size: 1.5em;
     }
-    .TripDetails table th{
+
+    .TripDetails table th {
         font-size: 1.2em;
     }
-    .TripDetails table td{
+
+    .TripDetails table td {
         font-size: 1em;
     }
+    .notes{
+        padding-left: 30px;
+    }
+}
+@media(max-width:375px) {
+     .TripDetails h3 {
+        font-size: 1.3em;
+    }
+    .TripDetails table th {
+        font-size: 1em;
+    }
+
+    .title {
+        height: 80px;
+    }
+
+    .notes{
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+   .notes h2{
+    font-size: 1.6em;
+   } 
 }

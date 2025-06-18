@@ -46,7 +46,6 @@ function Header() {
                     >
                         <span className={`${Css.add1} ${location.pathname === "/OnlineBooking" ? Css.add : ""}`}>Online Booking</span>
                     </Link>
-
                     {/*<p className={Css.contact}>Contact: 9370235180</p>*/}
                 </div>
                 <div className={Css.MiniHeader} onClick={toggleMenu}>

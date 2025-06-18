@@ -20,10 +20,6 @@ function App() {
           <Route element={<Ser/>} path="/Services"/>
           <Route element={<ContactUs/>} path="/ContactUs" />
           <Route element={<OnlineBooking/>} path="/OnlineBooking" />
-          {/*<Route element={<Home />} path="/About" />
-          <Route element={<Home />} path="/services" />
-          <Route element={<Home />} path="/contact" />
-          <Route element={<Home />} path="/Online Booking" />*/}
         </Routes>
         <Footer/>
       </BrowserRouter>

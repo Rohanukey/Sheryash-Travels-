@@ -8,7 +8,7 @@ function Homepage() {
       <div className={Css.Outercover}>
         <div className={Css.bgcover}>
           <div className={Css.bg}>
-            <h1>Explore The world</h1><br />
+            <h1>Explore Maharashtra</h1><br />
             <h1>one Trip at a time</h1>
           </div>
         </div>
@@ -18,9 +18,9 @@ function Homepage() {
               <h3>Email</h3>
               <h4>ShreyashTravel@gmail.com</h4>
             </div>
-            <div className={Css.info}>
+            <div className={Css.info}>  
               <h3>Address</h3>
-              <h4>Plot no X77 Abhijeet nagar manewada besa road Nagpur 440038</h4>
+              <h4>Plot no 21 Abhijeet nagar mangaldeep-2 besa road Nagpur</h4>
             </div>
             <div className={Css.info}>
               <h3>Bussiness Hours</h3>
