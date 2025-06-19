@@ -1,6 +1,6 @@
 import React from 'react'
 import Css from "./About.module.css"
-import pic3 from "../../assets/tokyo.jpg"
+import pic3 from "../../assets/tokyo.webp"
 
 function About() {
     return (

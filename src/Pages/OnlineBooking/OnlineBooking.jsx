@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Css from "./OnlineBooking.module.css";
 import { useForm } from "react-hook-form";
-import car1 from "../../assets/Car1.jpg";
+import car1 from "../../assets/Car1.webp";
 import axios from "axios";
-import tick from "../../assets/tick.png";
+import tick from "../../assets/tick.webp";
 import emailjs from 'emailjs-com';
 
 function OnlineBooking() {

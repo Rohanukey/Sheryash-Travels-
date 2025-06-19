@@ -1,7 +1,7 @@
 import React, { lazy, useState } from 'react'
 import Css from "../../Pages/Services/Services.module.css"
-import bg from '../../assets/taxi.jpg'
-import bg2 from '../../assets/taxi_v.jpg'
+import bg from '../../assets/taxi.webp'
+import bg2 from '../../assets/taxi_v.webp'
 
 function Services() {
 

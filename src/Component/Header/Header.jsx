@@ -1,6 +1,6 @@
 import React from 'react'
 import Css from "./Header.module.css"
-import logo from '../../assets/Sheryash_logo.png'
+import logo from '../../assets/Sheryash_logo.webp'
 import ham from '../../assets/hamburger.png'
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
