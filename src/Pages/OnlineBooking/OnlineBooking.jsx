@@ -9,7 +9,7 @@ import emailjs from 'emailjs-com';
 function OnlineBooking() {
     const { register, handleSubmit, reset } = useForm();
     const [data, setData] = useState([]);
-    const url = "http://localhost:3000/testdata/";
+    const url = "https://sheryash-travel-backend.onrender.com/api/users";
     const [successMessage, setSuccessMessage] = useState("");
     const [isFormVisible, setIsFormVisible] = useState(true);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,12 +24,12 @@ function OnlineBooking() {
                 setData((prev) => [...prev, dat]);
                 reset();
 
-                {/*await emailjs.send(
+                {await emailjs.send(
                     'service_y16w09j',
                     'template_7wo49ku',
                     dat,
                     'NbgYRGNM_jZv7vGOs'
-                );*/}
+                );}
 
                 setSuccessMessage(`Your Booking has been successfully, Thankyou for chosing us ${dat.name}.`);
                 setIsFormVisible(false);
@@ -38,7 +38,7 @@ function OnlineBooking() {
             } finally {
                 setIsSubmitting(false);
             }
-        }, 2000);
+        }, 1200);
     };
 
     const getdata = async () => {
@@ -68,7 +68,7 @@ function OnlineBooking() {
                                     <div className={Css.inputGroup}>
                                         <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                                         <input {...register("pickup", { required: true, maxLength: 20 })} placeholder="Pickup" />
-                                        <input {...register("Destination", { required: true, maxLength: 20 })} placeholder="Destination" />
+                                        <input {...register("destination", { required: true, maxLength: 20 })} placeholder="Destination" />
                                     </div>
                                     <div className={Css.inputGroup}>
                                         <input {...register("number")} type="tel" required placeholder="Number" />
