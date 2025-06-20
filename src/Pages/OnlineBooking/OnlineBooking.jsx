@@ -38,7 +38,7 @@ function OnlineBooking() {
             } finally {
                 setIsSubmitting(false);
             }
-        }, 1200);
+        },500)
     };
 
     const getdata = async () => {
