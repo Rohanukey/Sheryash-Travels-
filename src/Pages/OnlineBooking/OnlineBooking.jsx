@@ -20,8 +20,7 @@ function OnlineBooking() {
         try {
             const res = await axios.post(url, dat);
             console.log("Response from server:", res.data);
-            setData((prev) => [...prev, dat]);
-            reset();
+            setData((prev) => [...prev, dat]);     
 
             {
                 await emailjs.send(
@@ -34,6 +33,7 @@ function OnlineBooking() {
 
             setSuccessMessage(`Your Booking has been successfully, Thankyou for chosing us ${dat.name}.`);
             setIsFormVisible(false);
+            reset();
         } catch (err) {
             console.error("Error submitting data:", err);
         } finally {
