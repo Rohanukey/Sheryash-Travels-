@@ -17,28 +17,28 @@ function OnlineBooking() {
     const onSubmit = async (dat) => {
         setIsSubmitting(true);
 
-        setTimeout(async () => {
-            try {
-                const res = await axios.post(url, dat);
-                console.log("Response from server:", res.data);
-                setData((prev) => [...prev, dat]);
-                reset();
+        try {
+            const res = await axios.post(url, dat);
+            console.log("Response from server:", res.data);
+            setData((prev) => [...prev, dat]);
+            reset();
 
-                {await emailjs.send(
+            {
+                await emailjs.send(
                     'service_y16w09j',
                     'template_7wo49ku',
                     dat,
                     'NbgYRGNM_jZv7vGOs'
-                );}
-
-                setSuccessMessage(`Your Booking has been successfully, Thankyou for chosing us ${dat.name}.`);
-                setIsFormVisible(false);
-            } catch (err) {
-                console.error("Error submitting data:", err);
-            } finally {
-                setIsSubmitting(false);
+                );
             }
-        },500)
+
+            setSuccessMessage(`Your Booking has been successfully, Thankyou for chosing us ${dat.name}.`);
+            setIsFormVisible(false);
+        } catch (err) {
+            console.error("Error submitting data:", err);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const getdata = async () => {
@@ -80,7 +80,7 @@ function OnlineBooking() {
                                     <div className={Css.SubmitingWrapper}>
                                         <h2 style={{ color: "orange", marginTop: "20px" }}>Submitting...</h2>
                                     </div>
-                                ):(<div></div>)}
+                                ) : (<div></div>)}
                                 <input id="submitbtn" type="submit" value="Book Now" />
                             </form>
                         </div>
